@@ -41,6 +41,21 @@ app.get("/", function(req, res) {
 
 });
 
+var io = socketio.listen(servidor);
+
+//escuhando preticiones de conexión de los clientes
+io.sockets.on("connection",function(socket){
+	//escuchando si el cleinte me envia un mensaje
+	socket.on("mensaje_al_servidor", function(datosCliente){
+		var nombreCliente =  datosCliente.nombre;
+		var mensajeCliente = datosCliente.mensaje;
+		io.sockets.emit("mensaje_al_cliente",{
+			nombre: nombreCliente,
+			mensaje: mensajeCliente
+		});
+	});
+	
+});
 //--------HABILITAMOS WEBSOCKETS---------
 
 //var io = socketio.listen(servidor);
