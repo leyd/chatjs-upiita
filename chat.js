@@ -42,20 +42,21 @@ app.get("/", function(req, res) {
 });
 
 //--------HABILITAMOS WEBSOCKETS---------
-/*var io = socketio.listen(servidor);
+
+//var io = socketio.listen(servidor);
 //habilita un websocket en el puero 8021-se deb mostar info -socket.io
 //para cada cliente
-io.sockets.on("connection", function(socket) {
+//io.sockets.on("connection", function(socket) {
 	//para el cliente que se comunica
 	//socket.on Cuando recibe mensajes del cliente
-	socket.on("mensaje_al_servidor", function(datosCliente) {
+	//socket.on("mensaje_al_servidor", function(datosCliente) {
 		//alert("ataque") XSS
-		var nombre = validator.escape(datosCliente.nombre);
-		var mensaje = validator.escape(datosCliente.mensaje);
+		/*var nombre = validator.escape(datosCliente.nombre);
+		var mensaje = validator.escape(datosCliente.mensaje);*/
 		//emite un mensaje al cliente
-		io.sockets.emit("mensaje_al_cliente", {
+		/*io.sockets.emit("mensaje_al_cliente", {
 			nombre : nombre,
 			mensaje : mensaje
-		});
-	});
-});*/
+		});*/
+	//});
+//});

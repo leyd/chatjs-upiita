@@ -11,10 +11,10 @@
 		<script type="text/javascript">
 		 
 		/*abrimos l conexion, io se define cuando importo socket io*/
-	/*	var socket = io.connect(location.origin);
+		var socket = io.connect(location.origin);
 		
 		$(function(){
-            $("#boton").click(function(){
+           /* $("#boton").click(function(){
                
                 var nombre = $("#nombre-usuario").val();
                 var mensaje = $("#mensaje-usuario").val();
@@ -22,17 +22,17 @@
                     nombre: nombre,
                     mensaje: mensaje
                 });
-            });
-            */
+            });*/
+            
             /*escucho el mensaje al cliente*/
-         /*   socket.on("mensaje_al_cliente", function(datosServidor){
-                var nombre = datosServidor.nombre;
-                var mensaje =  datosServidor.mensaje;
+           //socket.on("mensaje_al_cliente", function(datosServidor){
+              /*  var nombre = datosServidor.nombre;
+                var mensaje =  datosServidor.mensaje;*/
                 /*hay que validar el mensaje del lado del servidor*/
-                var caja = "<div class='mensaje'> <span>" + nombre + " dice: </span> "+ mensaje +"</div>";
-                $("#mensajes").append(caja);
-            });
-		});		*/
+             /*   var caja = "<div class='mensaje'> <span>" + nombre + " dice: </span> "+ mensaje +"</div>";
+                $("#mensajes").append(caja);*/
+            //})
+		});		
 			
 		</script>
 	</head>
